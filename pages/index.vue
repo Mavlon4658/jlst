@@ -6,9 +6,197 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <h1 class="text-red-500 mt-10">Hello world</h1>
-        <btn />
+    <div class="lg:pt-4">
+
+        <!-- Home -->
+        <section class="relative z-[1] text-white pt-[80px] pb-[76px] lg:pt-[130px] lg:pb-[130px] mb-[30px] lg:mb-[38px]">
+            <img src="~/assets/images/home-bg.png" alt="" class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+            <div class="container">
+                <div class="max-w-[785px] mx-auto">
+                    <h2 class="text-center text-[32px] lg:text-[52px] font-semibold mb-[5px] leading-[115%] lg:leading-[64px] uppercase">Поиск запчастей по номеру</h2>
+                    <p class="text-center text-lg lg:text-2xl leading-[115%] mb-[10px] lg:mb-[30px]">введите номер запчасти для поиска по каталогу</p>
+                    <div class="w-full lg:bg-white flex flex-col lg:flex-row items-center lg:rounded-[5px]">
+                        <select name="" id="" class="border-b lg:border-b-0 border-color-4 lg:border-r lg:border-color-4 border-solid text-sm text-black h-[60px] w-full lg:w-[158px] flex-shrink-0 outline-none px-5 rounded-[5px_5px_0_0] lg:rounded-none form-select">
+                            <option value="" selected hidden>Новая запчасть</option>
+                            <option value="" v-for="i in 5" :key="i">select {{ i }}</option>
+                        </select>
+                        <input type="text" placeholder="Номер запчасти" class="w-full h-[60px] outline-none text-black px-5 text-sm leading-[135%] rounded-[0_0_5px_5px] lg:rounded-none">
+                        <Btn class="h-[60px] flex-shrink-0 w-[147px] mt-[10px] lg:mt-0">Найти</Btn>
+                    </div>
+                    <p class="text-xs lg:text-[15px] leading-4 lg:leading-[135%] text-center mt-[10px] lg:mt-[30px]">Если вы не знаете номер запчасти <a href="#" class="inline underline">Зарегистрируйтесь</a> или <a href="#" class="inline underline">Войдите в личный кабинет</a> если вы уже зарегистрированы</p>
+                </div>
+            </div>
+        </section>
+        <!-- Home end -->
+
+        <!-- Spare parts -->
+        <section class="pb-[30px] lg:pb-[93px]">
+            <div class="container">
+                <h2 class="text-[36px] lg:text-[48px] leading-[40px] lg:leading-[115%] tracking-[-0.3px] mb-[10px] text-black">Продажа новых и б/у запасных частей для складской техники</h2>
+                <p class="text-color-4 text-lg lg:text-2xl leading-7 lg:leading-[135%] font-semibold lg:font-normal tracking-[-0.2px] mb-[30px] lg:mb-[60px]">Оставьте заявку, и мы свяжемся с вами, или перейдите в личный кабинет для выбора и покупки автозапчастей</p>
+                <ul class="flex flex-wrap gap-y-6 lg:gap-y-10 gap-x-6">
+                    <li class="w-full md:w-[calc(50%_-_12px)] lg:w-[calc(100%_/_3_-_16px)] xl:w-[calc(25%_-_18px)]">
+                        <NuxtLink to="/" class="flex flex-col justify-between items-start bg-color-6 p-6 h-[240px] rounded-[3px] relative overflow-hidden spare-card">
+                            <span class="text-2xl tracking-[-0.2px] font-semibold">
+                                Запасные части для <br> вилочных <br> погрузчиков
+                            </span>
+                            <Btn class="w-[112px] h-[37px] hidden">подобрать</Btn>
+                            <img src="~/assets/images/arrow-narrow-up.svg" alt="" class="icon">
+                            <img src="~/assets/images/spare-card-1.png" alt="" class="absolute right-0 bottom-0 w-[204px]">
+                        </NuxtLink>
+                    </li>
+                    <li class="w-full md:w-[calc(50%_-_12px)] lg:w-[calc(100%_/_3_-_16px)] xl:w-[calc(25%_-_18px)]">
+                        <NuxtLink to="/" class="flex flex-col justify-between items-start bg-color-6 p-6 h-[240px] rounded-[3px] relative overflow-hidden spare-card">
+                            <span class="text-2xl tracking-[-0.2px] font-semibold">
+                                Запасные части <br> для подвижных <br> мобильных <br> платформ
+                            </span>
+                            <Btn class="w-[112px] h-[37px] hidden">подобрать</Btn>
+                            <img src="~/assets/images/arrow-narrow-up.svg" alt="" class="icon">
+                            <img src="~/assets/images/spare-card-2.png" alt="" class="absolute right-0 bottom-0 w-[204px]">
+                        </NuxtLink>
+                    </li>
+                    <li class="w-full md:w-[calc(50%_-_12px)] lg:w-[calc(100%_/_3_-_16px)] xl:w-[calc(25%_-_18px)]">
+                        <NuxtLink to="/" class="flex flex-col justify-between items-start bg-color-6 p-6 h-[240px] rounded-[3px] relative overflow-hidden spare-card">
+                            <span class="text-2xl tracking-[-0.2px] font-semibold">
+                                Запасные части для <br> промышленных <br> поломоечных <br> машин
+                            </span>
+                            <Btn class="w-[112px] h-[37px] hidden">подобрать</Btn>
+                            <img src="~/assets/images/arrow-narrow-up.svg" alt="" class="icon">
+                            <img src="~/assets/images/spare-card-3.png" alt="" class="absolute right-[15px] bottom-[15px] w-[128px]">
+                        </NuxtLink>
+                    </li>
+                    <li class="w-full md:w-[calc(50%_-_12px)] lg:w-[calc(100%_/_3_-_16px)] xl:w-[calc(25%_-_18px)]">
+                        <NuxtLink to="/" class="flex flex-col justify-between items-start bg-color-6 p-6 h-[240px] rounded-[3px] relative overflow-hidden spare-card">
+                            <span class="text-2xl tracking-[-0.2px] font-semibold">
+                                Минискладское <br> оборудование
+                            </span>
+                            <Btn class="w-[112px] h-[37px] hidden">подобрать</Btn>
+                            <img src="~/assets/images/arrow-narrow-up.svg" alt="" class="icon">
+                            <img src="~/assets/images/spare-card-4.png" alt="" class="absolute right-0 bottom-[9px] w-[171px]">
+                        </NuxtLink>
+                    </li>
+                    <li class="w-full md:w-[calc(50%_-_12px)] lg:w-[calc(100%_/_3_-_16px)] xl:w-[calc(25%_-_18px)]">
+                        <NuxtLink to="/" class="flex flex-col justify-between items-start bg-color-6 p-6 h-[240px] rounded-[3px] relative overflow-hidden spare-card">
+                            <span class="text-2xl tracking-[-0.2px] font-semibold">
+                                Запасные части для <br> узкопроходных <br> штабеллеров
+                            </span>
+                            <Btn class="w-[112px] h-[37px] hidden">подобрать</Btn>
+                            <img src="~/assets/images/arrow-narrow-up.svg" alt="" class="icon">
+                            <img src="~/assets/images/spare-card-5.png" alt="" class="absolute right-0 bottom-[18px] w-[171px]">
+                        </NuxtLink>
+                    </li>
+                    <li class="w-full md:w-[calc(50%_-_12px)] lg:w-[calc(100%_/_3_-_16px)] xl:w-[calc(25%_-_18px)]">
+                        <NuxtLink to="/" class="flex flex-col justify-between items-start bg-color-6 p-6 h-[240px] rounded-[3px] relative overflow-hidden spare-card">
+                            <span class="text-2xl tracking-[-0.2px] font-semibold">
+                                Запасные части для <br> штабеллеров
+                            </span>
+                            <Btn class="w-[112px] h-[37px] hidden">подобрать</Btn>
+                            <img src="~/assets/images/arrow-narrow-up.svg" alt="" class="icon">
+                            <img src="~/assets/images/spare-card-6.png" alt="" class="absolute right-0 bottom-[9.87px] w-[171px]">
+                        </NuxtLink>
+                    </li>
+                    <li class="w-full md:w-[calc(50%_-_12px)] lg:w-[calc(100%_/_3_-_16px)] xl:w-[calc(25%_-_18px)]">
+                        <NuxtLink to="/" class="flex flex-col justify-between items-start bg-color-6 p-6 h-[240px] rounded-[3px] relative overflow-hidden spare-card">
+                            <span class="text-2xl tracking-[-0.2px] font-semibold">
+                                Запасные части для <br> ричтраков
+                            </span>
+                            <Btn class="w-[112px] h-[37px] hidden">подобрать</Btn>
+                            <img src="~/assets/images/arrow-narrow-up.svg" alt="" class="icon">
+                            <img src="~/assets/images/spare-card-7.png" alt="" class="absolute right-1 bottom-[15px] w-[171px]">
+                        </NuxtLink>
+                    </li>
+                    <li class="w-full md:w-[calc(50%_-_12px)] lg:w-[calc(100%_/_3_-_16px)] xl:w-[calc(25%_-_18px)]">
+                        <NuxtLink to="/" class="flex flex-col justify-between items-start bg-color-6 p-6 h-[240px] rounded-[3px] relative overflow-hidden spare-card">
+                            <span class="text-2xl tracking-[-0.2px] font-semibold">
+                                Запасные части для <br> комплектовщиков <br> заказов
+                            </span>
+                            <Btn class="w-[112px] h-[37px] hidden">подобрать</Btn>
+                            <img src="~/assets/images/arrow-narrow-up.svg" alt="" class="icon">
+                            <img src="~/assets/images/spare-card-8.png" alt="" class="absolute right-1 bottom-2 w-[171px]">
+                        </NuxtLink>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Spare parts end -->
+
+        <section class="mb-[30px] lg:mb-[53px] bg-[linear-gradient(157.72deg,_rgb(142,142,142)_34.658%,_rgb(40,40,40)_74.923%,_rgb(80,80,80)_87.523%)] lg:bg-none">
+            <div class="container relative z-[1] text-white lg:bg-[linear-gradient(157.72deg,_rgb(142,142,142)_34.658%,_rgb(40,40,40)_74.923%,_rgb(80,80,80)_87.523%)] pt-6 pb-[232px] lg:pt-10 lg:pb-10 lg:px-[120px] rounded-[3px]">
+                <h2 class="mb-6 text-[36px] lg:text-5xl leading-10 lg:leading-[115%] tracking-[-0.4px] font-normal text-center lg:text-left">Для ознакомления с каталогом <br> и покупки автозапчастей</h2>
+                <div class="flex flex-col lg:flex-row items-center gap-6">
+                    <Btn class="h-[60px] w-[278px]">Зарегистрируйтесь</Btn>
+                    <p class="lowercase text-base leading-[120%] tracking-[0.15px]">
+                        Или <NuxtLink to="/">войдите в Личный кабинет</NuxtLink>
+                    </p>
+                </div>
+                <img src="~/assets/images/spare-car.png" alt="" class="absolute object-contain z-[-1] left-[50%] lg:left-auto -translate-x-2/4 lg:translate-x-0 bottom-0 lg:bottom-auto lg:right-[42px] lg:top-[-70px] 2xl:top-[-128px] min-w-[390px] w-[390px] lg:w-[580px] xl:w-[650px] 2xl:w-[777px]">
+            </div>
+        </section>
+
+        <!-- Company -->
+        <section class="mb-[30px] lg:mb-[60px] relative z-[1]">
+            <div class="container flex flex-col lg:flex-row items-center gap-6">
+                <div class="rounded-[3px] overflow-hidden w-full md:w-[550px] xl:w-[620px] md:h-[632px] flex-shrink-0">
+                    <img src="~/assets/images/company-logo.png" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col gap-[30px]">
+                    <h2 class="text-[36px] lg:text-5xl leading-10 lg:leading-[55px] tracking-[-0.3px] -mb-[15px] lg:mb-0 font-normal">О компании</h2>
+                    <ul class="flex flex-col gap-[15px] lg:gap-[23px]">
+                        <li class="text-sm lg:text-base leading-[135%] lg:leading-[21px]">Лишь сторонники тоталитаризма в науке будут объявлены нарушающими общечеловеческие нормы этики и морали. Наше дело не так однозначно, как может показаться: синтетическое тестирование требует анализа инновационных методов управления процессами. </li>
+                        <li class="text-sm lg:text-base leading-[135%] lg:leading-[21px]">Лишь независимые государства призывают нас к новым свершениям, которые, в свою очередь, должны быть ограничены исключительно образом мышления. </li>
+                        <li class="text-sm lg:text-base leading-[135%] lg:leading-[21px]">Банальные, но неопровержимые выводы, а также интерактивные прототипы набирают популярность среди определенных слоев населения, а значит, должны быть в равной степени предоставлены сами себе.</li>
+                    </ul>
+                    <div>
+                        <h3 class="text-2xl lg:text-4xl leading-[32px] lg:leading-10 tracking-[-0.3px] font-semibold lg:font-normal mb-[15px]">Как мы работаем:</h3>
+                        <ul class="flex flex-col gap-[15px]">
+                            <li class="flex items-start lg:items-center gap-[10px] overflow-hidden">
+                                <span class="text-[56px] lg:text-[60px] font-light leading-[64px] lg:leading-[40px] tracking-[-0.4px] text-color-1 w-[42px] flex-shrink-0 text-right -translate-x-3.5">01</span>
+                                <p class="w-full text-sm lg:text-base leading-[135%] text-black">В поиске на сайте вводите номер запчасти, если вы не знаете номера, то регистрируетесь, в личном кабинете вам будет доступен каталог, в котором можно номер найти</p>
+                            </li>
+                            <li class="flex items-center gap-[10px] overflow-hidden">
+                                <span class="text-[56px] lg:text-[60px] font-light leading-[64px] lg:leading-[40px] tracking-[-0.4px] text-color-1 w-[42px] flex-shrink-0 text-right -translate-x-3.5">02</span>
+                                <p class="w-full text-sm lg:text-base leading-[135%] text-black">Переходите на страницу найденой запчасти</p>
+                            </li>
+                            <li class="flex items-center gap-[10px] overflow-hidden">
+                                <span class="text-[56px] lg:text-[60px] font-light leading-[64px] lg:leading-[40px] tracking-[-0.4px] text-color-1 w-[42px] flex-shrink-0 text-right -translate-x-3.5">03</span>
+                                <p class="w-full text-sm lg:text-base leading-[135%] text-black">Оставляете заявку на сайте, наш менеджер свяжется с вами для уточнения заказа, или оформляете заказ на сайте</p>
+                            </li>
+                            <li class="flex items-center gap-[10px] overflow-hidden">
+                                <span class="text-[56px] lg:text-[60px] font-light leading-[64px] lg:leading-[40px] tracking-[-0.4px] text-color-1 w-[42px] flex-shrink-0 text-right -translate-x-3.5">04</span>
+                                <p class="w-full text-sm lg:text-base leading-[135%] text-black">Оплачиваете заказ удобным для вас методом</p>
+                            </li>
+                            <li class="flex items-center gap-[10px] overflow-hidden">
+                                <span class="text-[56px] lg:text-[60px] font-light leading-[64px] lg:leading-[40px] tracking-[-0.4px] text-color-1 w-[42px] flex-shrink-0 text-right -translate-x-3.5">05</span>
+                                <p class="w-full text-sm lg:text-base leading-[135%] text-black">Получаете доставку, осуществив самовывоз или через любые ТК на ваше усмотрение </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Company end -->
+
+        <!-- Question -->
+        <section class="mb-[65px]">
+            <div class="container flex flex-col lg:flex-row items-center justify-between gap-[15px] md:gap-[50px] xl:gap-[100px] bg-[#8F8F8F] rounded-[3px] overflow-hidden text-white px-[15px] md:px-[60px] xl:px-[120px] py-6 md:py-12">
+                <div class="w-full 2xl:w-auto 2xl:flex-shrink-0">
+                    <h2 class="text-[36px] md:text-5xl leading-[40px] md:leading-[115%] tracking-[-0.3px] mb-[5px] md:mb-[10px] font-normal text-center lg:text-start">У вас остались вопросы?</h2>
+                    <h3 class="text-lg md:text-[32px] leading-7 md:leading-[125%] tracking-[-0.2px] font-semibold md:font-normal text-center lg:text-start">Оставьте свои контакты и менеджер <br> перезвонит вам для уточнения</h3>
+                </div>
+                <div class="w-full">
+                    <div class="flex items-center flex-col md:flex-row gap-[10px] md:gap-6 mb-3 md:mb-[25px]">
+                        <input type="text" placeholder="Ваше имя" class="w-full bg-white h-[46px] md:h-[60px] px-5 placeholder:text-color-4 text-black outline-none text-base rounded-[5px]">
+                        <input type="tel" placeholder="Ваш телефон" class="w-full bg-white h-[46px] md:h-[60px] px-5 placeholder:text-color-4 text-black outline-none text-base rounded-[5px]">
+                    </div>
+                    <div class="flex items-center flex-col md:flex-row gap-[10px] md:gap-6">
+                        <p class="w-full text-sm md:text-base leading-[135%] text-center md:text-start font-normal">Нажимая на кнопку “Отправить” даю согласие на обработку Персональных данных</p>
+                        <Btn class="w-full h-[60px]">Отправить</Btn>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Question end -->
+
     </div>
 </template>
 

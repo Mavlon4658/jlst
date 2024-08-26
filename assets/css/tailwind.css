@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+@font-face {
+    font-family: 'Proxima nova';
+    src: url('../fonts/proximanova_regular.ttf');
+    font-weight: 400;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .font-source-sans {
+        font-family: "Source Sans 3", sans-serif;
+    }
+
+    .font-sora {
+        font-family: "Sora", sans-serif;
+    }
+
+    .font-proxima-nova {
+        font-family: 'Proxima nova', sans-serif;
+    }
+}
+
+.container {
+    @apply max-w-[1520px] mx-auto
+}
+
+@media (max-width: 1560px) {
+    .container {
+        @apply max-w-[calc(100%_-_34px)]
+    }
+}
+
+
+.spare-card:hover {
+    background: #fff;
+    box-shadow: 65px 51px 33px rgba(0, 0, 0, 0.01),
+                37px 28px 28px rgba(0, 0, 0, 0.05),
+                16px 13px 21px rgba(0, 0, 0, 0.09),
+                4px 3px 11px rgba(0, 0, 0, 0.1);
+}
+
+.spare-card:hover .icon {
+    display: none;
+}
+
+.spare-card:hover button {
+    display: flex;
+}
+

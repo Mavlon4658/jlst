@@ -1,15 +1,13 @@
 <template>
-    <div class="wrapper">
+    <div class="w-full overflow-hidden min-h-[100svh] font-source-sans font-normal">
         <!-- Header -->
-        <header>
-            <img src="~/assets/images/logo.svg" alt="">
-            <h2>this is header</h2>
-            <NuxtLink to="/">home</NuxtLink>
-            <br>
-            <NuxtLink to="/product">product</NuxtLink>
-        </header>
+        <Header />
         <!-- Header end -->
 
         <slot />
+
+        <!-- Footer -->
+        <Footer />
+        <!-- Footer end -->
     </div>
 </template>
