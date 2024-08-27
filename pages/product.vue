@@ -1,13 +1,17 @@
-<script>
-    export default {
-
-    }
-</script>
-
 <template>
-    <h2>Hello product</h2>
+    <div>
+        <Search />
+
+        <section class="mb-[126px]">
+
+        </section>
+
+        <Spare />
+    </div>
 </template>
 
-<style>
-
-</style>
+<script>
+    export default {
+        
+    }
+</script>
