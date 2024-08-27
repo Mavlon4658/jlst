@@ -51,3 +51,6 @@
     display: flex;
 }
 
+.form-inp {
+    @apply w-full bg-white py-3 px-[15px] lg:px-6 placeholder:text-color-4 text-black text-xs lg:text-base leading-4 lg:leading-6 font-normal lg:font-semibold tracking-[-0.3px] rounded-[3px] outline-none
+}
