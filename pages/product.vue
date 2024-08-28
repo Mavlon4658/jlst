@@ -10,7 +10,6 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
-// import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 export default {
