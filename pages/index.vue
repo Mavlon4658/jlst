@@ -12,7 +12,6 @@ import 'swiper/css/effect-fade';
 
 // import required modules
 import { EffectFade, Navigation } from 'swiper/modules';
-import Btn from '~/components/Btn.vue';
 
 export default {
     components: {
