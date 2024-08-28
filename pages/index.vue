@@ -1,7 +1,33 @@
-
 <script>
+import { ref } from 'vue';
+
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+// Import Swiper styles
+import 'swiper/css';
+
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+
+// import required modules
+import { EffectFade, Navigation } from 'swiper/modules';
+import Btn from '~/components/Btn.vue';
+
 export default {
-    
+    components: {
+        Swiper,
+        SwiperSlide
+    },
+    setup() {
+        const prev = ref(null);
+        const next = ref(null);
+        return {
+            prev,
+            next,
+            modules: [EffectFade, Navigation],
+        };
+    },
 }
 </script>
 
@@ -116,6 +142,65 @@ export default {
                         </NuxtLink>
                     </li>
                 </ul>
+                <div class="mt-[30px] lg:mt-[60px] relative">
+                    <swiper
+                        :effect="'fade'"
+                        :loop="true"
+                        :initialSlide="4"
+                        :modules="modules"
+                        :navigation="{
+                            prevEl: prev,
+                            nextEl: next,
+                        }"
+                    >
+                        <swiper-slide class="min-h-[500px] lg:min-h-[480px] relative z-[1]">
+                            <img src="~/assets/images/slider-bg.png" alt="" class="absolute w-full h-full z-[-1] top-0 left-0">
+                            <div class="absolute top-8 lg:top-0 left-0 lg:left-[120px] w-full lg:w-[480px] xl:w-[616px] h-full flex flex-col lg:justify-center items-center lg:items-start gap-[15px] lg:gap-[30px] px-[6px] lg:px-0">
+                                <h3 class="text-4xl lg:text-[56px] leading-10 lg:leading-[64px] font-normal lg:font-semibold tracking-[-1px] text-center lg:text-start">Запасные части для вилочных погрузчиков</h3>
+                                <Btn class="w-[268px] h-[59px]">подобрать</Btn>
+                            </div>
+                            <img src="~/assets/images/spare-swp-1.png" alt="" class="h-[329px] lg:h-auto w-full lg:w-[580px] xl:w-[634px] object-contain absolute -bottom-6 lg:bottom-auto lg:top-2/4 lg:-translate-y-2/4 lg:right-[60px] xl:right-[120px] z-[-1]">
+                        </swiper-slide>
+                        <swiper-slide class="min-h-[500px] lg:min-h-[480px] relative z-[1]">
+                            <img src="~/assets/images/slider-bg.png" alt="" class="absolute w-full h-full z-[-1] top-0 left-0">
+                            <div class="absolute top-8 lg:top-0 left-0 lg:left-[120px] w-full lg:w-[480px] xl:w-[616px] h-full flex flex-col lg:justify-center items-center lg:items-start gap-[15px] lg:gap-[30px] px-[6px] lg:px-0">
+                                <h3 class="text-4xl lg:text-[56px] leading-10 lg:leading-[64px] font-normal lg:font-semibold tracking-[-1px] text-center lg:text-start">Запасные части <br> для ричтраков</h3>
+                                <Btn class="w-[268px] h-[59px]">подобрать</Btn>
+                            </div>
+                            <img src="~/assets/images/spare-swp-2.png" alt="" class="h-[329px] lg:h-auto w-full lg:w-[460px] xl:w-[463px] object-contain absolute bottom-0 lg:bottom-auto lg:top-2/4 lg:-translate-y-2/4 lg:right-[60px] xl:right-[180px] z-[-1]">
+                        </swiper-slide>
+                        <swiper-slide class="min-h-[500px] lg:min-h-[480px] relative z-[1]">
+                            <img src="~/assets/images/slider-bg.png" alt="" class="absolute w-full h-full z-[-1] top-0 left-0">
+                            <div class="absolute top-8 lg:top-0 left-0 lg:left-[120px] w-full lg:w-[480px] xl:w-[616px] h-full flex flex-col lg:justify-center items-center lg:items-start gap-[15px] lg:gap-[30px] px-[6px] lg:px-0">
+                                <h3 class="text-4xl lg:text-[56px] leading-10 lg:leading-[64px] font-normal lg:font-semibold tracking-[-1px] text-center lg:text-start">Запасные части для штабеллеров</h3>
+                                <Btn class="w-[268px] h-[59px]">подобрать</Btn>
+                            </div>
+                            <img src="~/assets/images/spare-swp-3.png" alt="" class="h-[329px] lg:h-auto w-full lg:w-[450px] xl:w-[459px] object-contain absolute bottom-0 lg:bottom-auto lg:top-2/4 lg:-translate-y-2/4 lg:right-[100px] xl:right-[190px] z-[-1]">
+                        </swiper-slide>
+                        <swiper-slide class="min-h-[500px] lg:min-h-[480px] relative z-[1]">
+                            <img src="~/assets/images/slider-bg.png" alt="" class="absolute w-full h-full z-[-1] top-0 left-0">
+                            <div class="absolute top-8 lg:top-0 left-0 lg:left-[120px] w-full lg:w-[480px] xl:w-[616px] h-full flex flex-col lg:justify-center items-center lg:items-start gap-[15px] lg:gap-[30px] px-[6px] lg:px-0">
+                                <h3 class="text-4xl lg:text-[56px] leading-10 lg:leading-[64px] font-normal lg:font-semibold tracking-[-1px] text-center lg:text-start">Запасные части для палетоперевозчиков</h3>
+                                <Btn class="w-[268px] h-[59px]">подобрать</Btn>
+                            </div>
+                            <img src="~/assets/images/spare-swp-4.png" alt="" class="h-[329px] lg:h-auto w-full lg:w-[630px] xl:w-[634px] object-contain absolute bottom-0 lg:bottom-auto lg:top-2/4 lg:-translate-y-2/4  -right-10 xl:right-10 z-[-1]">
+                        </swiper-slide>
+                        <swiper-slide class="min-h-[500px] lg:min-h-[480px] relative z-[1]">
+                            <img src="~/assets/images/slider-bg.png" alt="" class="absolute w-full h-full z-[-1] top-0 left-0">
+                            <div class="absolute top-8 lg:top-0 left-0 lg:left-[120px] w-full lg:w-[480px] xl:w-[616px] h-full flex flex-col lg:justify-center items-center lg:items-start gap-[15px] lg:gap-[30px] px-[6px] lg:px-0">
+                                <h3 class="text-4xl lg:text-[56px] leading-10 lg:leading-[64px] font-normal lg:font-semibold tracking-[-1px] text-center lg:text-start">Запасные части для узкопроходных машин</h3>
+                                <Btn class="w-[268px] h-[59px]">подобрать</Btn>
+                            </div>
+                            <img src="~/assets/images/spare-swp-5.png" alt="" class="h-[300px] lg:h-auto w-full lg:w-[560px] xl:w-[571px] object-contain absolute -bottom-3 lg:bottom-auto lg:top-2/4 lg:-translate-y-2/4  lg:right-10 xl:right-[160px] z-[-1]">
+                        </swiper-slide>
+                    </swiper>
+                    <button ref="prev" class="absolute z-[1] left-[10px] lg:left-10 top-2/4 -translate-y-2/4">
+                        <img src="~/assets/images/swp-btn.svg" alt="">
+                    </button>
+                    <button ref="next" class="absolute z-[1] right-[10px] lg:right-10 top-2/4 -translate-y-2/4 rotate-180">
+                        <img src="~/assets/images/swp-btn.svg" alt="">
+                    </button>
+                </div>
             </div>
         </section>
         <!-- Spare parts end -->

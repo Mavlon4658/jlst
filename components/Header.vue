@@ -35,12 +35,12 @@ export default {
                 </ul>
             </div>
             <div class="flex gap-[10px] lg:gap-6">
-                <NuxtLink to="#" class="flex items-center gap-2 text-black font-proxima-nova text-base">
+                <NuxtLink to="/sign-in" class="flex items-center gap-2 text-black font-proxima-nova text-base">
                     <img src="~/assets/images/user.svg" alt="">
                     <span class="hidden lg:block">Вход в личный кабинет</span>
                 </NuxtLink>
                 <span class="bg-[linear-gradient(to_bottom,_rgba(193,195,221,0),_#686977,_rgba(193,195,221,0))] w-[1px] h-9"></span>
-                <NuxtLink to="#" class="flex items-center gap-2 text-black font-proxima-nova text-base">
+                <NuxtLink to="/sign-up" class="flex items-center gap-2 text-black font-proxima-nova text-base">
                     <img src="~/assets/images/user-plus.svg" alt="">
                     <span class="hidden lg:block">Регистрация</span>
                 </NuxtLink>

@@ -55,8 +55,22 @@
     @apply w-full bg-white py-3 px-[15px] lg:px-6 placeholder:text-color-4 text-black text-xs lg:text-base leading-4 lg:leading-6 font-normal lg:font-semibold tracking-[-0.3px] rounded-[3px] outline-none
 }
 
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../images/arrow-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center;
+}
+
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
     margin: 0; 
+}
+
+.product-swp .swiper-slide-thumb-active::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full border border-color-2 rounded-[3px] bg-[rgba(0,0,0,0.4)]
 }
