@@ -3,5 +3,6 @@
         <div class="w-full sm:w-[536px]">
             <slot />
         </div>
+        <Navigation />
     </div>
 </template>

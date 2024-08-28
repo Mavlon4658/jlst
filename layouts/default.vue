@@ -9,5 +9,7 @@
         <!-- Footer -->
         <Footer />
         <!-- Footer end -->
+
+        <Navigation />
     </div>
 </template>
